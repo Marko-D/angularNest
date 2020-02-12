@@ -9,10 +9,10 @@ import { AuthModule } from './auth/auth.module';
   imports: [ContactsModule,       
   TypeOrmModule.forRoot({
     type: 'postgres',
-    port: 5432,
-    username: 'postgres',
-    password: '',
+    host: 'localhost',
     database: 'test',
+    username: 'root',
+    password: 'root',
     entities: [__dirname + '/**/*.entity{.ts,.js}'],
     synchronize: true,
  }), AuthModule,],

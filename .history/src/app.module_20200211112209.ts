@@ -8,11 +8,8 @@ import { AuthModule } from './auth/auth.module';
 @Module({
   imports: [ContactsModule,       
   TypeOrmModule.forRoot({
-    type: 'postgres',
-    port: 5432,
-    username: 'postgres',
-    password: '',
-    database: 'test',
+    type: 'sqlite',
+    database: 'db',
     entities: [__dirname + '/**/*.entity{.ts,.js}'],
     synchronize: true,
  }), AuthModule,],
